@@ -1,0 +1,113 @@
+.bf-pdf-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+}
+.bf-pdf-outer .bf-pdf-inner {
+  position: relative;
+  width: 100%;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page {
+  position: relative;
+  border: #111;
+  margin-top: 10px;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-pagecontent,
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-emptypage {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  line-height: 1;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text > span {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .highlight {
+  margin: -1px;
+  padding: 1px;
+  background-color: #b400aa;
+  border-radius: 4px;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .highlight.begin {
+  border-radius: 4px 0px 0px 4px;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .highlight.end {
+  border-radius: 0px 4px 4px 0px;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .highlight.middle {
+  border-radius: 0px;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .highlight.selected {
+  background-color: #006400;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text ::-moz-selection {
+  background: #0000ff;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text ::selection {
+  background: #0000ff;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .endOfContent {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.bf-pdf-outer .bf-pdf-inner .bf-pdf-page .bf-pdf-text .endOfContent.active {
+  top: 0px;
+}
+.bf-pdf-outer .bf-pdf-draggable {
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.bf-pdf-outer .bf-pdf-toolbar {
+  background-color: #111111aa;
+  position: absolute;
+  z-index: 200;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #ffffff;
+  padding: 10px;
+  min-width: 200px;
+  min-height: 50px;
+}
+.bf-pdf-outer .bf-pdf-pageturning {
+  -webkit-transition: margin ease 0.5s;
+  -o-transition: margin ease 0.5s;
+  transition: margin ease 0.5s;
+}
